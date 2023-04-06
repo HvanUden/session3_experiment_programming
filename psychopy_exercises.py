@@ -3,9 +3,19 @@
 
 ## Exercise A
 # 1. Load pandas and psychopy
+import pandas as pd
+import psychopy as psy
+
 # 2. Load the picture verification simuli file
 #    (look up the .read_csv method of pandas)
+loaded_pictures = pd.read_csv("picture_verification_stimuli.csv")
+
 # 3. Loop over the item names, and print them on the screen
+for items in loaded_pictures:
+    print(loaded_pictures['item'])
+
+   
+
 #    (you can loop over a single column just like a list!)
 # 4. Now, change your code to show a text stimulus with each item name,
 #     with a 1 second pause in between, instead of using print().
